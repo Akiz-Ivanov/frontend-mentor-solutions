@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: '/Blog-Preview/'
+    base: '/frontend-mentor-solutions/blog-preview-card/'
 });
