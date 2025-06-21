@@ -11,5 +11,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/contact-form/",
+  base: "/frontend-mentor-solutions/contact-form/",
 })
