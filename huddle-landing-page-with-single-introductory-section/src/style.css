@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* * {
+  border: 1px solid black;
+  box-sizing: border-box;
+}  */
+
+@theme {
+  --color-violet: hsl(257, 40%, 49%);
+  --color-soft-magenta: hsl(300, 69%, 71%);
+
+  --font-poppins: 'Poppins', sans-serif;
+  --font-open-sans: 'Open Sans', sans-serif;
+
+  --text-regular: 400;
+  --text-semibold: 600;
+
+  /* --text-title: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem); */
+  --text-title: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+  
+  --text-body: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+
+  --breakpoint-2xl: 90rem;
+
+  --spacing-1280-1440: clamp(80rem, 67.1429rem + 14.2857vw, 90rem);
+  --spacing-128-200: clamp(8rem, 6.4155rem + 6.7606vw, 12.5rem);
+}
+
+@layer base {
+  html {
+    @apply font-poppins text-regular grid place-content-center;
+  }
+
+  body {
+    @apply bg-violet text-white md:flex md:flex-col md:justify-center md:items-center;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    background-image: url('/src/assets/images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media screen and (min-width: 48rem) {
+    body {
+      background-image: url('/src/assets/images/bg-desktop.svg');
+      background-size: cover;
+    }
+  }
+
+  a {
+    @apply border-1 border-white rounded-full w-10 h-10 flex justify-center items-center hover:border-soft-magenta transition duration-300 ease-in-out hover:text-soft-magenta;
+  }
+}

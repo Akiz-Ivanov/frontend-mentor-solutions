@@ -1,0 +1,97 @@
+@use './functions' as *;
+@use './mixins' as *;
+@use './variables' as *;
+
+/*==============================
+  Layout
+===============================*/
+body {
+    @include flex(column, center, center);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    max-width: 85%;
+    margin-bottom: rem(120);
+}
+
+.cards-container {
+    display: grid;
+    gap: rem(35);
+    align-items: center;
+    grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four';
+}
+
+.card {
+    @include flex(column, baseline, flex-start);
+    box-shadow: 0 15px 30px -11px hsla(216, 50%, 67%, 0.5);
+    border-radius: $border-radius;
+    padding: rem(32);
+    background-color: var(--White);
+    min-width: 0;
+    max-width: rem(360);
+}
+
+.card-cyan {
+    background: linear-gradient(to bottom, var(--Cyan) 5px, transparent 5px), var(--White);
+    grid-area: one;
+}
+
+.card-red {
+    background: linear-gradient(to bottom, var(--Red) 5px, transparent 5px), var(--White);
+    grid-area: two;
+}
+
+.card-orange {
+    grid-area: three;
+    background: linear-gradient(to bottom, var(--Orange) 5px, transparent 5px), var(--White);
+}
+
+.card-blue {
+    background: linear-gradient(to bottom, var(--Blue) 5px, transparent 5px), var(--White);
+    grid-area: four;
+}
+
+img {
+    margin-bottom: rem(10);
+    margin-left: auto;
+    margin-top: rem(25);
+}
+
+header {
+    @include flex(column, center, center);
+    text-align: center;
+    max-width: min(85%, rem(610));
+    margin-bottom: rem(60);
+    margin-top: rem(80);
+}
+
+
+/*==============================
+  Media queries
+===============================*/
+@media (min-width: 767px) {
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'one two'
+            'four three';
+        align-items: stretch;
+    }
+}
+
+@media (min-width: 1120px) {
+    .cards-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            '. two .'
+            'one two four'
+            'one three four'
+            '. three .';
+    }
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A responsive profile card component built with HTML and Tailwind CSS. Includes user details, avatar, and social stats in a clean, accessible layout. Frontend Mentor challenge solution.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Profile card component</title>
+</head>
+
+<body>
+  <main class="px-6">
+    <div class="wrapper">
+
+      <div class="card
+        grid grid-rows-[auto_auto_auto] relative
+        rounded-2xl shadow-2xl bg-white place-items-center">
+
+        <figure class="row-start-1">
+          <img src="/src/assets/images/bg-pattern-card.svg" alt=""
+            class="card-bg rounded-t-2xl w-full pointer-events-none min-h-[8.5rem]" />
+        </figure>
+
+        <figure class="border-4 border-white rounded-full row-start-2 justify-self-center z-10 overflow-hidden -mt-12">
+          <img src="/src/assets/images/image-victor.jpg" alt="Victor Crest" />
+        </figure>
+
+        <section class="row-start-3 mt-6
+          flex flex-col items-center w-full gap-6">
+
+          <header class="flex flex-col items-center">
+            <h1 class="flex flex-row gap-2">Victor Crest <span>26</span></h1>
+            <p class="text-sm text-dark-gray">London</p>
+          </header>
+
+          <footer class="w-full">
+            <ul class="grid grid-cols-3 text-center py-6 px-4 w-full
+              border-t border-dark-gray/20">
+              <li>
+                <h2>80K</h2>
+                <span>Followers</span>
+              </li>
+              <li>
+                <h2>803K</h2>
+                <span>Likes</span>
+              </li>
+              <li>
+                <h2>1.4K</h2>
+                <span>Photos</span>
+              </li>
+            </ul>
+          </footer>
+
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

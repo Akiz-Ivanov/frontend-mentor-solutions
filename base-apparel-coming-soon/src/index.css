@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-desaturated-red: hsl(0, 36%, 70%);
+  --color-soft-red: hsl(0, 93%, 68%);
+  --color-dark-grayish-red: hsl(0, 6%, 24%);
+
+  --text-paragraph: clamp(0.875rem, 0.787rem + 0.3756vw, 1.125rem);
+
+  --font-josefin: "Josefin Sans", sans-serif;
+
+  --text-title: clamp(2.25rem, 1.6338rem + 2.6291vw, 4rem);
+
+  --spacing-8-10: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+  --spacing-24-40: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+  --spacing-16-136: clamp(1rem, -1.6408rem + 11.2676vw, 8.5rem);
+  --spacing-16-220: clamp(1rem, -3.4894rem + 19.1549vw, 13.75rem);
+  --spacing-16-224: clamp(1rem, -3.5775rem + 19.5305vw, 14rem);
+  --spacing-136-224: clamp(8.5rem, -5.6429rem + 15.7143vw, 14rem);
+
+  --spacing-btn-width: clamp(4rem, 3.2077rem + 3.3803vw, 6.25rem);
+  --spacing-btn-height: clamp(3rem, 2.8239rem + 0.7512vw, 3.5rem);
+  --spacing-error-icon: clamp(4.5rem, 3.7077rem + 3.3803vw, 6.75rem);
+  --spacing-input-right: clamp(6.5rem, 5.7077rem + 3.3803vw, 8.75rem);
+
+  --breakpoint-desktop: 90rem;
+}
+
+@layer base {
+  html {
+    @apply text-base font-josefin;
+  }
+
+  body {
+    @apply flex flex-col items-center gap-6;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+   
+    min-width: 100vw;
+    min-width: 100dvw;
+  }
+
+  h1 {
+    @apply text-title uppercase font-semibold text-dark-grayish-red leading-[1.15];
+    letter-spacing: .3em;
+  }
+}

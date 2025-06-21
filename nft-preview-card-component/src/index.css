@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --blue-500: hsl(215, 51%, 70%);
+  --cyan-400: hsl(178, 100%, 50%);
+
+  --blue-950: hsl(217, 54%, 11%);
+  --blue-900: hsl(216, 50%, 16%);
+  --blue-800: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --font-size-body: 18px;
+  --font-family: 'Outfit', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+}
+
+@theme {
+  --color-blue-500: var(--blue-500);
+  --color-cyan-400: var(--cyan-400);
+  --color-blue-950: var(--blue-950);
+  --color-blue-900: var(--blue-900);
+  --color-blue-800: var(--blue-800);
+  --color-white: var(--white);
+
+  --text-body: var(--font-size-body);
+  --font-family: var(--font-family);
+  --font-weight-light: var(--font-weight-light);
+  --font-weight-regular: var(--font-weight-regular);
+  --font-weight-semibold: var(--font-weight-semibold);
+}
+
+@layer base {
+  html {
+    font-size: var(--font-size-body);
+    font-family: var(--font-family);
+  }
+
+  body {
+    background-color: var(--blue-950);
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+    --color-primary-magenta: hsl(300, 43%, 22%);
+    --color-primary-pink: hsl(333, 80%, 67%);
+  
+    --color-neutral-dark-magenta: hsl(303, 10%, 53%);
+    --color-neutral-light-magenta: hsl(300, 24%, 96%);
+    --color-neutral-white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --font-spartan: 'League Spartan', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* Font sizes */
+    --text-header: clamp(2.25rem, 1.8128rem + 2.1525vw, 3.75rem);
+    --text-subheader: clamp(1rem, 0.9464rem + 0.2679vw, 1.1875rem);
+    --text-paragraph: clamp(0.9375rem, 0.9155rem + 0.0939vw, 1rem);
+    --text-base: clamp(1rem, 0.978rem + 0.0939vw, 1.0625rem);
+
+    /* Spacing */
+    --spacing-16-160: clamp(1rem, -1.6233rem + 12.9148vw, 10rem);
+    --spacing-40-72: clamp(2.5rem, 1.917rem + 2.87vw, 4.5rem);
+    --spacing-8-40: clamp(0.5rem, -4.4231rem + 7.6923vw, 2.5rem);
+    --spacing-16-80: clamp(1rem, -8.8462rem + 15.3846vw, 5rem);
+    --spacing-16-104: clamp(1rem, -4.2481rem + 22.3919vw, 6.5rem);
+}
+
+@layer base {
+  html {
+    @apply font-spartan font-regular;
+  }
+
+  body {
+    @apply bg-neutral-white text-neutral-dark-magenta;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+    
+    display: grid;
+    place-items: center;
+
+    background-image:
+        url('/src/assets/images/bg-pattern-top-mobile.svg'),
+        url('/src/assets/images/bg-pattern-bottom-mobile.svg');
+    
+    background-repeat: no-repeat, no-repeat;
+
+    background-position: left 0vw top 0vh, right 0vw bottom 0vh;
+
+    background-size: 100vw 20vh, 100vw 50vh;
+  }
+
+  h2 {
+    @apply font-bold text-primary-magenta leading-none text-header;
+  }
+}
+
+@media (min-width: 48rem) {
+  body {
+    background-image:
+        url('/src/assets/images/bg-pattern-top-desktop.svg'),
+        url('/src/assets/images/bg-pattern-bottom-desktop.svg');
+
+    background-size: 45vw 48vh, 70vw 80vh;
+  }
+}

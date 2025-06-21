@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue: hsl(223, 87%, 63%);
+  --color-pale-blue: hsl(223, 100%, 88%);
+  --color-light-red: hsl(354, 100%, 66%);
+  --color-gray: hsl(0, 0%, 59%);
+  --color-very-dark-blue: hsl(209, 33%, 12%);
+
+  --text-body: 1.25rem;
+  --font-libre-franklin: 'Libre Franklin', system-ui, sans-serif;
+
+  --text-title: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+
+  --breakpoint-xs: 31.25rem;
+
+  --spacing-input-btn-y: clamp(0.6875rem, 0.5775rem + 0.4695vw, 1rem);
+}
+
+@layer base {
+  html {
+    @apply font-libre-franklin;
+  }
+
+  body {
+    @apply flex flex-col justify-center items-stretch text-body font-light;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  a {
+    @apply text-blue rounded-full hover:text-white transition-colors duration-300
+      outline-1 outline-gray/30 w-8 h-8 flex items-center justify-center
+      hover:bg-blue hover:outline-0 focus:outline-blue focus:outline-2;
+  }
+}

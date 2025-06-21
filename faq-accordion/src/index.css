@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --white: hsl(0, 100%, 100%);
+  --purple-100: hsl(275, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-950: hsl(292, 42%, 14%);
+  --font-sans: "Work Sans", sans-serif;
+  --font-size-body: 1rem;
+
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    font-size: clamp(var(--font-size-body), 2.5vw, 1.2rem);
+    font-weight: var(--font-weight-normal);
+  }
+}
+
+@theme {
+  --color-purple-950: var(--purple-950);
+  --color-white: var(--white);
+  --color-purple-100: var(--purple-100);
+
+  --text-body: clamp(var(--font-size-body), 2.5vw, 1.2rem);
+  --text-clamped-h1: clamp(2rem, 5vw, 3rem);
+
+  --text-purple-600: var(--purple-600);
+
+  --font-weight-semibold: var(--font-weight-semibold);
+  --font-weight-bold: var(--font-weight-bold);
+  --font-weight-normal: var(--font-weight-normal);
+}

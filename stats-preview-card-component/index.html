@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A responsive stats preview card component showcasing business analytics insights. Built with HTML & CSS for Frontend Mentor." />
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Stats preview card component</title>
+</head>
+
+<body>
+  <main class="flex flex-col justify-center items-center">
+
+    <div class="card
+    m-6 bg-dark-desaturated-blue rounded-lg
+    lg:flex lg:flex-row-reverse lg:max-w-full 
+    lg:w-3/4 xs:max-w-lg overflow-hidden 
+    ">
+
+      <!-- Image with overlay -->
+      <figure class="relative w-full  overflow-hidden lg:w-1/2">
+        <div class="overlay 
+        absolute inset-0 bg-soft-violet mix-blend-multiply z-10 
+        "></div>
+        <picture>
+          <source media="(min-width: 1024px)" srcset="/src/assets/images/image-header-desktop.jpg">
+          <source media="(max-width: 1023px)" srcset="/src/assets/images/image-header-mobile.jpg">
+          <img src="/src/assets/images/image-header-mobile.jpg" alt="" class="w-full h-full object-cover z-0
+          brightness-110 saturate-110 hue-rotate-0
+          ">
+        </picture>
+      </figure>
+
+      <section class="card
+      flex flex-col justify-center items-center text-center lg:text-left
+      text-white gap-8 px-[clamp(2.25rem,5vw,6rem)] py-[clamp(2.25rem,5vw,5rem)] lg:justify-between lg:items-start
+      lg:w-1/2 w-full">
+
+        <div class="flex flex-col gap-4 lg:gap-8">
+          <h1 class="text-[clamp(1.875rem,2.5vw,3.375rem)] font-bold leading-tight  md:leading-snug">
+            Get <strong class="text-soft-violet ">insights</strong> that help your business grow.
+          </h1>
+
+          <p class="text-white-transparent-60 text-[clamp(1rem,1.1vw,1.7rem)]">
+            Discover the benefits of data analytics and make better decisions regarding revenue, customer
+            experience, and overall efficiency.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6
+        lg:flex-row lg:justify-between lg:w-full m-2
+        lg:pr-8 lg:gap-0">
+
+          <dl>
+            <dt>
+              10k+
+            </dt>
+            <dd>COMPANIES</dd>
+          </dl>
+
+          <dl>
+            <dt>
+              314
+            </dt>
+            <dd>TEMPLATES</dd>
+          </dl>
+
+          <dl>
+            <dt>
+              12M+
+            </dt>
+
+            <dd>QUERIES</dd>
+          </dl>
+
+        </div>
+
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

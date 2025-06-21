@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors - Primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Colors - Neutral */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  /* Typography */
+  --font-size-body: 15px;
+
+  /* Font Families */
+  --font-lexend-deca: 'Lexend Deca', sans-serif;
+  --font-big-shoulders: 'Big Shoulders Display', sans-serif;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+@theme {
+  --color-bright-orange: var(--bright-orange);
+  --color-dark-cyan: var(--dark-cyan);
+  --color-very-dark-cyan: var(--very-dark-cyan);
+
+  --color-transparent-white: var(--transparent-white);
+  --color-very-light-gray: var(--very-light-gray);
+
+  --text-size-body: var(--font-size-body);
+
+  --font-lexend-deca: var(--font-lexend-deca);
+  --font-big-shoulders: var(--font-big-shoulders);
+
+  --font-weight-regular: var(--font-weight-regular);
+  --font-weight-bold: var(--font-weight-bold);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-lexend-deca);
+    font-size: var(--font-size-body);
+  }
+
+  body {
+    background-color: var(--very-light-gray);
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    font-family: var(--font-big-shoulders);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+  }
+}

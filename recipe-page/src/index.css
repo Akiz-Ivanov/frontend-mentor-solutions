@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url(/src/assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url(/src/assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Stone100: hsl(30, 54%, 90%);
+  --Stone150: hsl(30, 18%, 87%);
+  --Stone600: hsl(30, 10%, 34%); 
+  --Stone900: hsl(24, 5%, 18%) ;
+  --Brown800: hsl(14, 45%, 36%);
+  --Rose00: hsl(332, 51%, 32%);
+  --Rose0: hsl(330, 100%, 98%);
+}
+
+/*==============================
+  CSS Reset
+===============================*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  scroll-behavior: smooth;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*==============================
+  Layout
+===============================*/
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--Stone100);
+  font-family: "Outfit", sans-serif;
+  overscroll-behavior: none;
+}
+
+
+/*==============================
+  Media Queries
+===============================*/
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (min-width: 768) {
+  body {
+    align-items: center;
+  }
+}

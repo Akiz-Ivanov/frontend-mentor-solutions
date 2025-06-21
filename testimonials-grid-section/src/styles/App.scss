@@ -1,0 +1,65 @@
+@use './functions' as fnc;
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    max-width: fnc.rem(1250);
+    margin: 3rem;
+    gap: 2rem;
+    grid-template-areas:
+        "one one two five"
+        "one one two five"
+        "three four four five"
+        "three four four five";
+}
+
+/*==============================
+  Media Queries
+===============================*/
+@media (max-width: 1200px) {
+    .wrapper {
+        gap: 1rem;
+        margin: 1.5rem;
+    }
+}
+
+@media (max-width: 1050px) {
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+        margin: 2rem;
+        grid-template-areas:
+            "one one two"
+            "one one two"
+            "three four four"
+            "three four four"
+            "five five five";
+    }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        
+        grid-template-areas: 
+        'one four'
+        'two three'
+        'five five';
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four"
+            "five";
+    }
+}

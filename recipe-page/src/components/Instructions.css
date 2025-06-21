@@ -1,0 +1,42 @@
+.instructions-section {
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 0.5px solid var(--Stone150);
+}
+
+.instructions-ol {
+    margin-bottom: 1.5rem;
+}
+
+.instructions-ol > li {
+    position: relative;
+    color: var(--Stone600);
+    font-weight: 400;
+    margin-inline: 0.5rem;
+    margin-block: 0.7rem;
+    padding-left: 2.2rem;
+    line-height: 140%;
+    counter-increment: list-counter;
+    
+}
+
+ol li::before {
+    position: absolute;
+    content: counter(list-counter) ". ";
+    color: var(--Brown800);
+    font-weight: bold;
+    font-size: 1.2rem;
+    left: 0;
+    top: 0;
+}
+
+
+@media (min-width: 768px) {
+    .instructions-section {
+        padding: 0;
+        margin: 0;
+        margin-block: 1rem;
+    }
+}

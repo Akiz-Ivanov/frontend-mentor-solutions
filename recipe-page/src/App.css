@@ -1,0 +1,28 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--White);
+    padding-bottom: 1rem;
+}
+
+
+/*==============================
+  Media queries
+===============================*/
+
+@media (min-width: 768px) {
+    main {
+        padding-inline: 2.8rem;
+        padding-top: 2.7rem;
+        padding-bottom: 0.5rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 48.5rem;
+    }
+
+    body {
+        padding-block: 8rem;
+    }
+}

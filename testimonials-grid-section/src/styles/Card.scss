@@ -1,0 +1,76 @@
+@use './functions' as fnc;
+@use './mixins' as *;
+@use './variables' as *;
+
+.card {
+    @include flex(column, center, flex-start);  
+    padding: clamp(1rem, 0.6429rem + 1.7857vw, 2.25rem);
+    gap: fnc.rem(18);
+    background-color: var(--Purple500);
+    border-radius: $border-radius;
+    
+    font-size: $fs-small;
+    font-weight: var(--fw-normal);
+    box-shadow: 60px 80px 35px rgba($Black, 0.10);
+
+    &__header {
+        font-size: $fs-large;
+        line-height: 1.2;
+        font-weight: var(--fw-bold);
+        
+    }
+
+    &__text {
+        font-weight: var(--fw-normal);
+        line-height: clamp(1.4, 1.6, 1.8);
+    }
+}
+
+.profile {
+    @include flex(row, flex-start, center);
+    gap: fnc.rem(16);
+
+    &__avatar {
+        border-radius: 50%;
+        width: fnc.rem(32);
+    }
+
+    &__info {
+        @include flex(column, flex-start, flex-start)
+    }
+
+    &__name {
+        font-size: fnc.rem(15);
+
+    }
+
+    &__role {
+        line-height: 1.5;
+        font-size: fnc.rem(12);
+    }
+}
+
+/*==============================
+  Media queries
+===============================*/
+@media (min-width: 1200px) {
+    .card__text {
+        font-size: clamp(0.8125rem, 0.1875rem + 0.8333vw, 0.9375rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .card:first-of-type {
+        background-image: url(../assets/images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-position-x: 83.5%;
+        background-position-y: top;
+        background-size: fnc.rem(121);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+    .card {   
+        @include flex(column, flex-start, flex-start)
+    }
+}

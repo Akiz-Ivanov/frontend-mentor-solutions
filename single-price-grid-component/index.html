@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Frontend Mentor challenge solution for the Single Price Grid Component. Built with HTML and Tailwind CSS for responsive, accessible layout.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Single Price Grid Component</title>
+</head>
+
+<body class="bg-light-gray ">
+  <main class="px-6">
+    <section class="card
+      flex flex-col max-w-2xl shadow-lg rounded-md md:rounded-lg
+      bg-white text-paragraph-large overflow-hidden"
+    >
+
+      <header class="flex flex-col p-card-padding">
+
+        <h1 class="text-header-main font-bold text-cyan leading-relaxed mb-4">
+          Join our community
+        </h1>
+
+        <span class="text-subheader font-bold text-yellow mb-3">
+          30-day, hassle-free money back guarantee
+        </span>
+
+        <p class="leading-loose md:text-balance">
+          Gain access to our full library of tutorials along with expert code reviews.
+          Perfect for any developers who are serious about honing their skills.
+        </p>
+
+      </header>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 bg-cyan text-light-gray
+         "
+      >
+
+        <article class="flex flex-col p-card-padding bg-[#2bb3b1]">
+
+          <h2 class="font-bold text-xl mb-2">
+            Monthly Subscription
+          </h2>
+
+          <p class="flex gap-4 items-center text-light-gray/60 text-base">
+            <span class="font-bold text-4xl text-light-gray leading-relaxed">
+              &dollar;29 
+            </span>
+              per month
+          </p>
+
+          <p class="text-base">
+            Full access for less than &dollar;1 a day
+          </p>
+
+          <button type="button"
+            class="bg-yellow hover:bg-yellow/80 text-light-gray font-bold shadow-lg rounded-sm cursor-pointer mt-8
+            py-3 px-6 text-button
+            "
+          >
+            Sign Up
+          </button>
+        </article>
+
+        <article class="flex flex-col gap-4 p-card-padding bg-[#4abebd]">
+
+          <h2 class="text-xl font-bold">
+            Why Us
+          </h2>
+
+          <ul class="text-light-gray/80 leading-snug">
+            <li>Tutorials by industry experts</li>
+            <li>Peer &amp; expert code review</li>
+            <li>Coding exercises</li>
+            <li>Access to our GitHub repos</li>
+            <li>Community forum</li>
+            <li>Flashcard decks</li>
+            <li>New videos every week</li>
+          </ul>
+        </article>
+
+      </div>
+
+    </section>
+  </main>
+</body>
+
+</html>

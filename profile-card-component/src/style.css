@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-cyan: hsl(185, 75%, 39%);
+  --color-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --color-dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --color-dark-gray: hsl(0, 0%, 59%);
+
+  --font-body: 'Kumbh Sans', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --text-body: 18px;
+}
+
+@layer base {
+
+  html {
+    @apply text-body font-body font-regular
+  }
+
+  body {
+    @apply flex flex-col justify-center items-center bg-dark-cyan text-dark-desaturated-blue;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+   
+    background-image: 
+      url('/src/assets/images/bg-pattern-top.svg'), 
+      url('/src/assets/images/bg-pattern-bottom.svg');
+
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 45vw top 55vh;
+  }
+
+  h1, h2 {
+    @apply font-bold text-lg
+  }
+
+  span {
+    @apply font-regular text-dark-grayish-blue
+  }
+
+  li > span {
+    @apply tracking-widest text-xs
+  }
+}
+
+@media (max-width: 30rem) {
+  body {
+    background-position: right 45vw bottom 56vh, left 45vw top 50vh;
+  }
+}
+
+@media (min-width: 93.75rem) {
+  body {
+    background-position: right 51vw bottom 45vh, left 52vw top 53vh;
+  }
+}

@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+
+  --color-cyan: hsl(179, 62%, 43%);
+  --color-yellow: hsl(71, 73%, 54%);
+  --color-light-gray: hsl(204, 43%, 93%);
+  --color-grayish-blue: hsl(218, 22%, 67%);
+
+  --font-karla: 'Karla', sans-serif;
+
+  --text-header-main: clamp(1.25rem, 1.0739rem + 0.7512vw, 1.75rem);
+  --text-subheader: clamp(1rem, 0.912rem + 0.3756vw, 1.25rem);
+  --text-paragraph-small: clamp(0.875rem, 0.5vw + 0.6rem, 0.9375rem);
+  --text-paragraph-large: clamp(0.875rem, 0.6vw + 0.6rem, 1rem);
+  --text-button: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+
+  --spacing-card-padding: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+}
+
+@layer base {
+  html {
+    @apply font-karla text-base;
+  }
+
+  body {
+    @apply bg-grayish-blue text-grayish-blue grid place-items-center font-normal;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}

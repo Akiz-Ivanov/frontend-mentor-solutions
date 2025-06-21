@@ -1,0 +1,49 @@
+@use 'functions' as *;
+
+/*==============================
+  Typography
+===============================*/
+
+.product__category,
+.product__title,
+.product__description,
+.product__button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product__category {
+    margin-block: rem(-2);
+    font-size: rem(12);
+    letter-spacing: rem(5);
+    font-weight: 500;
+    color: var(--Grey);
+}
+
+.product__title {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    color: var(--Black);
+    line-height: 1;
+    font-size: rem(32);
+}
+
+.product__description {
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.65;
+    color: var(--Grey);
+}
+
+.product__price--current {
+    font-family: 'Fraunces', sans-serif;
+    color: var(--Green500);
+    font-size: rem(32);
+}
+
+.product__price--original {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: line-through;
+    color: var(--Grey);
+    font-size: rem(13);
+    font-weight: 400;
+}

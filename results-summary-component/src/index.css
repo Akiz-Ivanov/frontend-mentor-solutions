@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+:root {
+  /* Primary Colors */
+  --light-red-hsl: 0, 100%, 67%;
+  --orangey-yellow-hsl: 39, 100%, 56%;
+  --green-teal-hsl: 166, 100%, 37%;
+  --cobalt-blue-hsl: 234, 85%, 45%;
+
+  /* Gradients */
+  --light-slate-blue-bg: hsl(252, 100%, 67%);
+  --light-royal-blue-bg: 241, 81%, 54%;
+  --violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* Typography */
+  --font-size-body: 18px;
+  --font-family: 'Hanken Grotesk', sans-serif;
+  --font-weight-500: 500;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+}
+
+@layer base {
+  html {
+    font-size: var(--font-size-body);
+    font-family: var(--font-family);
+  }
+}
+
+@layer utilities {
+  .result-bg-gradient {
+    background-image: linear-gradient(
+      to bottom,
+      var(--light-slate-blue-bg),
+      hsl(var(--light-royal-blue-bg))
+    );
+  }
+
+  .circle-bg-gradient {
+    background-image: linear-gradient(
+      to bottom,
+      var(--violet-blue-circle),
+      var(--persian-blue-circle)
+    );
+  }
+}
+
+@theme {
+  /* Neutral Colors */
+  --color-white: var(--white);
+  --color-pale-blue: var(--pale-blue);
+  --color-light-lavender: var(--light-lavender);
+  --color-dark-gray-blue: var(--dark-gray-blue);
+
+ /* Primary Colors - full */
+  --color-light-red: hsl(var(--light-red-hsl));
+  --color-orangey-yellow: hsl(var(--orangey-yellow-hsl));
+  --color-green-teal: hsl(var(--green-teal-hsl));
+  --color-cobalt-blue: hsl(var(--cobalt-blue-hsl));
+
+  /* Soft versions */
+  --color-light-red-soft: hsla(var(--light-red-hsl), 0.05);
+  --color-orangey-yellow-soft: hsla(var(--orangey-yellow-hsl), 0.05);
+  --color-green-teal-soft: hsla(var(--green-teal-hsl), 0.05);
+  --color-cobalt-blue-soft: hsla(var(--cobalt-blue-hsl), 0.05);
+
+  --color-light-royal-blue-soft: hsla(var(--light-royal-blue-bg), 0.15);
+
+  /* Gradients */
+  --color-light-slate-blue-bg: var(--light-slate-blue-bg);
+  --color-light-royal-blue-bg: hsl(var(--light-royal-blue-bg));
+  --color-violet-blue-circle: var(--violet-blue-circle);
+  --color-persian-blue-circle: var(--persian-blue-circle);
+
+  /* Typography */
+  --font-size-body: var(--font-size-body);
+  --font-family: var(--font-family);
+  --font-weight-500: var(--font-weight-500);
+  --font-weight-700: var(--font-weight-700);
+  --font-weight-800: var(--font-weight-800);
+
+  /* Spacing */
+  --spacing-30: 7.5rem;
+}

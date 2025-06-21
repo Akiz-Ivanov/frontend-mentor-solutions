@@ -1,0 +1,81 @@
+@use './functions' as *;
+
+/*==============================
+  Layout
+===============================*/
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--Cream);
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: rem(400);
+  max-width: 92%;
+  height: fit-content;
+  background-color: var(--White);
+  border-radius: rem(10);
+  margin-top: rem(24);
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-top-left-radius: rem(10);
+    border-top-right-radius: rem(10);
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: rem(25);
+    gap: rem(16);
+  }
+
+  &__price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rem(20);
+    margin-top: rem(4);
+  }
+}
+
+/*==============================
+  Media Queries
+===============================*/
+
+@media (min-width: 769px) {
+  .product {
+    display: grid;
+    grid-template-columns: rem(300) rem(300);
+    gap: 0;
+    height: auto;
+    width: fit-content;
+    align-items: center;
+    margin-block: 0;
+  }
+
+  .product__price-container {
+    margin-top: 0;
+  }
+
+  .product__img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    border-radius: rem(10) rem(0) 0 rem(10);
+    filter: contrast(120%);
+  }
+
+  .product__text-wrapper {
+    padding-inline: rem(32);
+    gap: rem(24);
+  }
+}

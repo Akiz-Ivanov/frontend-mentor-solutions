@@ -1,0 +1,150 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+
+  --color-primary-light: var(--primary-light);
+  --color-primary: var(--primary);
+  --color-error: var(--error);
+
+  --color-white: var(--white);
+  --color-grey-500: var(--grey-500);
+  --color-grey-900: var(--grey-900);
+
+  --radius-primary: var(--radius);
+
+  --text-16-18: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+  --text-30-40: clamp(1.875rem, 1.6549rem + 0.939vw, 2.5rem);
+
+  --spacing-24-40: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+  --spacing-16-120: clamp(1rem, -5.2181rem + 26.5306vw, 7.5rem);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+
+  /* === Primary Colors === */
+  --color-primary-light: hsl(148, 38%, 91%);
+  --color-primary: hsl(169, 82%, 27%);
+  --color-error: hsl(0, 66%, 54%);
+
+  /* === Neutral Colors === */
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-500: hsl(186, 15%, 59%);
+  --color-grey-900: hsl(187, 24%, 22%);
+
+  /* === Typography === */
+  --font-body-size: 16px;
+  --font-family: 'Karla', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --radius: 0.5rem;
+  --background: hsl(148, 38%, 91%);
+  --foreground: hsl(187, 24%, 22%);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.042 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.042 264.695);
+  --primary: hsl(169, 82%, 27%);
+  --primary-foreground: oklch(0.984 0.003 247.858);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --destructive: var(--color-error);
+  --border: oklch(0.929 0.013 255.508);
+  --input: var(--color-grey-500);
+  /* --ring: oklch(0.704 0.04 256.788); */
+  --ring: hsla(169, 82%, 27%, 0.5);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  main {
+    @apply bg-background flex flex-col justify-center items-center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-family: var(--font-family);
+  }
+
+  input {
+    @apply w-full text-16-18;
+  }
+
+  h1 {
+    @apply font-bold text-3xl;
+  }
+}
+
+@layer components {
+
+  .required-label {
+    @apply mb-1 md:mb-1.5;
+  }
+
+  .required-label:last-child {
+    @apply mb-0;
+  }
+
+  .required-label::after {
+    content: " *";
+    color: var(--color-primary);
+    white-space: nowrap;
+  }
+
+  .radio-label-text {
+    @apply text-lg;
+  }
+}

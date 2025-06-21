@@ -1,0 +1,31 @@
+@use './variables';
+@use './base';
+@use './layout';
+@use './typography';
+@use './functions' as *;
+
+.product__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--White);
+  flex-grow: 1;
+  gap: rem(10);
+  height: rem(48);
+  border-radius: rem(8);
+  background-color: var(--Green500);
+  font-family: 'Montserrat', sans-serif;
+  font-size: rem(14);
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    background-color: var(--Green700);
+  }
+
+  &:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+}

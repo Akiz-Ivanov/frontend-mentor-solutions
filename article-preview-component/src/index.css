@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+
+  --font-manrope: "Manrope", sans-serif;
+}
+
+@theme inline {
+  --color-very-dark-grayish-blue: var(--very-dark-grayish-blue);
+  --color-desaturated-dark-blue: var(--desaturated-dark-blue);
+  --color-grayish-blue: var(--grayish-blue);
+  --color-light-grayish-blue: var(--light-grayish-blue);
+
+  --font-manrope: var(--font-manrope);
+  
+  --text-title-17-24: clamp(1.0625rem, 0.9085rem + 0.6573vw, 1.5rem);
+
+  --spacing-20-120: clamp(1.25rem, -4.7137rem + 25.4453vw, 7.5rem);
+}
+
+@layer base {
+  html {
+    @apply font-manrope;
+  }
+
+  body {
+    @apply flex flex-col justify-center items-center bg-light-grayish-blue overflow-x-hidden;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  a {
+    @apply focus-visible:outline-2 focus-visible:outline-grayish-blue focus-visible:outline-offset-2 p-[.1rem] flex justify-center;
+    will-change: transform;
+  }
+
+  a>img {
+    @apply transition-all duration-300 ease-in-out transform;
+    will-change: transform;
+    align-self: flex-end;
+  }
+}
